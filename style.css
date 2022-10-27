@@ -2,13 +2,13 @@
 
 /* Default Styles */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing:border-box;
-    text-decoration: none;
-    outline: none;
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    text-decoration: none;
 }
 
 html {
@@ -16,30 +16,30 @@ html {
 }
 
 .section-heading {
+    color: #fff;
     font-size: 12rem;
     font-weight: 900;
-    color: #fff;
-    text-align: center;
-    text-transform: capitalize;
     letter-spacing: 0.5rem;
+    text-align: center;
     text-shadow: .3rem .3rem .3rem #000;
+    text-transform: capitalize;
 }
 /* End of Default Styles */
 
 /* Navbar */
 
 .navbar {
-    width: 100%;
-    height: 14rem;
+    align-items:center;
     background-color: #000;
+    box-shadow: .2rem .2rem .2rem #000;
+    display: flex;
+    height: 14rem;
+    justify-content: space-evenly;
     position: fixed;
     top: -14rem;
-    z-index: 100;
-    display: flex;
-    justify-content: space-evenly;
-    align-items:center;
-    box-shadow: .2rem .2rem .2rem #000;
     transition: top 0.4s;
+    width: 100%;
+    z-index: 100;
 
 }
 
@@ -49,12 +49,12 @@ html {
 }
 
 .navbar-link {
+    align-items: center;
     color: #aaa;
-    margin: 0.4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    margin: 0.4rem;
     opacity: 0;
     transition: color 0.3s, opacity 2s;
 }
@@ -100,17 +100,17 @@ html {
 }
 
 .menu {
-    width:  4rem;
-    height: 6rem;
     background-color: #000;
+    border-radius: 30rem 30rem 15rem 15rem;
+    box-shadow: .1rem .1rem .1rem #000, -0.1rem -0.1rem 0.1rem #000;
+    cursor: pointer;
+    height: 6rem;
+    left: 5rem;
     position: fixed;
     top: 1rem;
-    left: 5rem;
-    border-radius: 30rem 30rem 15rem 15rem;
-    box-shadow: .1rem .1rem .1rem #000 -.1rem -.1rem .1rem #000;
-    cursor: pointer;
-    z-index: 50;
     transition: top .4s .2s;
+    width:  4rem;
+    z-index: 50;
 
 }
 .menu.change {
@@ -119,35 +119,35 @@ html {
 }
 
 .menu::before {
-content: "";
-width: 0.3rem;
-height: 15rem;
 background-color: #000;
+box-shadow: .1rem 0rem .1rem #000 ;
+content: "";
+height: 15rem;
+left: calc(50% - .15rem);
 position: absolute;
 top:-15rem;
-left: calc(50% - .15rem);
-box-shadow: .1rem 0rem .1rem #000 ;
+width: 0.3rem;
 }
 
 /* End of NavBar */
 
 /* Section 1*/
 .section-1 {
-    width: 100%;
-    height:100vh;
+    align-items: center;
     background-color: #333;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    height:100vh;
     justify-content: space-evenly;
+    width: 100%;
 }
 
 .section-1-icons i {
-font-size: 35rem;
 color: #a79a2d;
+font-size: 35rem;
 position: absolute;
-transform: translate(-50%, -50%) scale(0);
 text-shadow: 0.2rem 0.2rem 0.2rem #000;
+transform: translate(-50%, -50%) scale(0);
 transition: transform .3s;
 }
 
@@ -160,13 +160,13 @@ transition: transform .3s;
 
 /* Section 2 */
 .section-2 {
-    width: 100%;
-    height: 100vh;
     background-color: #222;
     display: flex;
     flex-direction: column;
+    height: 100vh;
     justify-content: space-between;
     padding: 10rem 0;
+    width: 100%;
 }
 
 .cards-container {
@@ -175,48 +175,48 @@ transition: transform .3s;
 }
 
 .card {
-    width:30rem;
+    align-items: center;
     background-color: #a79a2d;
-    padding: 4rem;
+    box-shadow: 1rem 1rem 1rem #000;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    box-shadow: 1rem 1rem 1 rem #000;
+    padding: 4rem;
     position: relative;
     transform:rotateY(20deg) skewX(-2deg);
     transition: transform .5s, box-shadow .5s;
+    width:30rem;
 }
 
 .card:hover {
-    transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
     box-shadow: 2rem 2rem 2rem #000;
+    transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
 }
 
 .card::before {
+    background-color: #817824;
+    box-shadow: -.1rem  -.1rem  .1rem #000;
     content:"";
     height: 100%;
-    width: 1rem;
-    background-color: #817824;
+    left: -1rem;
     position: absolute;
     top: 0;
-    left: -1rem;
-    transform: skewY(45deg);
     transform-origin: right;
-    box-shadow: -.1rem  -.1rem  .1rem #000;
+    transform: skewY(45deg);
+    width: 1rem;
 }
 
 .card::after {
+    background-color: #8f8317;
+    box-shadow: -.1rem  -.1rem  .1rem #000;
     content:"";
     height: 1rem;
-    width: 100%;
-    background-color: #8f8317;
+    left: 0;
     position: absolute;
     top: -1rem;
-    left: 0;
-    transform: skewX(45deg);
     transform-origin: bottom;
-    box-shadow: -.1rem  -.1rem  .1rem #000;
+    transform: skewX(45deg);
+    width: 100%;
 }
 
 
@@ -225,28 +225,28 @@ transition: transform .3s;
 }
 
 .card-name {
+    color:#111;
     font-size: 3rem;
     font-weight: 900;
-    text-transform: uppercase;
     letter-spacing: 0.5rem;
-    color:#111;
     margin: 2rem 0;
     text-shadow: .15rem .15rem .15rem #000;
+    text-transform: uppercase;
 }
 
 .card-btn {
-    width:70%;
     background-color: #111;
-    color: #888;
     border-radius: 5rem;
+    border: none;
+    box-shadow: -0.2rem -0.2rem 0.2rem #000;
+    color: #888;
+    cursor: pointer;
     font-size: 1.5rem;
     font-weight: 800;
     letter-spacing: 0.2rem;
-    text-transform: capitalize;
-    border: none;
     padding: .5rem 0;
-    cursor: pointer;
-    box-shadow: -.2rem -.2rem -.2rem #000;
+    text-transform: capitalize;
+    width:70%;
 }
 /* End of Section 2 */
 
@@ -258,28 +258,28 @@ transition: transform .3s;
 }
 
 .gallery {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-evenly;
     margin-top: 10rem;
 }
 
 .gallery-link {
-    position: relative;
     margin: 4rem 1rem;
+    position: relative;
 }
 
 .gallery-link::before {
+    background-color: #fff;
     content:"";
+    height: 0;
+    left: 80%;
     position: absolute;
     top: 2vw;
-    left: 80%;
-    width: .2rem;
-    height: 0;
-    background-color: #fff;
-    z-index: 10;
     transition: height .5s;
+    width: .2rem;
+    z-index: 10;
 }
 
 .gallery-link:hover::before {
@@ -289,14 +289,14 @@ transition: transform .3s;
 
 
 .gallery-link::after {
+    background-color: #fff;
     content:"";
+    height: .2rem;
+    left: 2rem;
     position: absolute;
     top: 30%;
-    left: 2rem;
-    width: 0;
-    height: .2rem;
-    background-color: #fff;
     transition: width 0.5s;
+    width: 0;
 }
 
 .gallery-link:hover::before {
@@ -308,11 +308,11 @@ transition: transform .3s;
   }
 
 .food-img {
-    width: 24vw;
+    box-shadow: .3rem .3rem .1rem #e92929, .5rem .5rem .1rem #a2e946, .7rem .7rem .1rem #297ce9, .9rem .9rem .1rem #e92999 ;
     height: 15vw;
     object-fit: cover;
-    box-shadow: .3rem .3rem .1rem #e92929, .5rem .5rem .1rem #a2e946, .7rem .7rem .1rem #297ce9, .9rem .9rem .1rem #e92999 ;
     transition: all .5s;
+    width: 24vw;
 }
 
 .gallery-link:hover .food-img {
@@ -323,87 +323,87 @@ transition: transform .3s;
 }
 
 .food-name {
-  position: absolute;  
-  top: 3rem;
-  left: 3rem;
+  color: #fff;
   font-size: 2rem;
   font-weight: 700;
-  text-transform: uppercase;
+  left: 3rem;
   letter-spacing: 0.1rem;
-  color: #fff;
-  width: 0;
   overflow: hidden;
+  position: absolute;  
+  text-transform: uppercase;
+  top: 3rem;
   transition: width 0.3s;
+  width: 0;
 }
 
 .gallery-link:hover .food-name {
-    width: 100%;
     transition: width 1.5s .5s;
+    width: 100%;
 }
 .food-description {
-    position: absolute;
     bottom: 3vw;
-    left: 2rem;
-    width: 70%;
+    color:#fff;
     font-size: 1.5rem;
     font-weight: 300;
+    left: 2rem;
     letter-spacing: .1rem;
-    text-transform: uppercase;
-    color:#fff;
     opacity: 0;
+    position: absolute;
+    text-transform: uppercase;
+    transition: opacity 0.3s;
     visibility: hidden;
-    transition: opacity .3;
+    width: 70%;
 }
 
 .gallery-link:hover .food-description {
     opacity: 1;
-    visibility: visible;
     transition: opacity 1s 1s;
+    visibility: visible;
 }
 /* End of Section 3 */
 
 /* Section 4 */
 
 .section-4 {
-    width:100%;
-    height: 30vh;
+    align-items: flex-start;
     background-color: #222;
     display: flex;
+    height: 30vh;
     justify-content: space-around;
-    align-items: flex-start;
     padding: 3rem 0;
     position: relative;
+    width:100%;
 }
 
 .section-4-text {
     text-transform: uppercase;
 }
 .section-4-heading {
+    color: #a79a2d;
     font-size: 4rem;
     font-weight: 900;
-    color: #a79a2d;
 }
 
 .section-4-paragraph {
+    color: #888;
     font-size: 1.5rem;
-    color: #888
 }
 
 .signup-form {
-    display: flex;
     align-items: center;
+    display: flex;
 }
 
 .signup-form-input {
-    width: 35rem;
-    height: 5rem;
-    padding: 1rem;
+    
     border: .2rem solid #a79a2d;
+    color: #a79a2d;
     font-size: 1.6rem;
     font-weight: 700;
+    height: 5rem;
     letter-spacing: .1rem;
-    color: #a79a2d;
-    
+    padding: 1rem;
+    width: 35rem;
 }
 
 .signup-form-input::placeholder {
@@ -411,28 +411,28 @@ color: #a79a2d;
 }
 
 .signup-form-btn {
-position: relative;
-left: -4.5rem;
-width: 4rem;
-height: 4rem;
 background-color: #333;
-color: #a79a2d;
 border: none;
-font-size: 1.8rem;
+color: #a79a2d;
 cursor: pointer;
+font-size: 1.8rem;
+height: 4rem;
+left: -4.5rem;
+position: relative;
+width: 4rem;
 }
 
 .copyright {
-position: absolute;
+border-top: 0.1rem solid #888;
 bottom: 3rem;
+color: #eee;
 font-size: 1.7rem;
 font-weight: 200;
-color: #eee;
 letter-spacing: 0.1rem;
-border-top: .1 rem solid #888;
 padding-top: 6rem;
-width: 100%;
+position: absolute;
 text-align: center;
+width: 100%;
 }
 
 /* End of Section 4 */
@@ -504,17 +504,17 @@ text-align: center;
         font-size: 7rem;
         margin: 0 10rem;
     }  
-  . .section-1-icons i {
+  .section-1-icons i {
     font-size: 20rem;
   }
   .menu {
     left: 2rem;
   }
   .section-4 {
-    height: 40rem;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    flex-direction: column;
+    height: 40rem;
+    justify-content: flex-start;
   }
 
   .section-4-text {
